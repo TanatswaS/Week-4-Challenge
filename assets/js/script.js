@@ -54,7 +54,54 @@ function hideResultText(){
   resultDiv.style.display = "none";
 }
 
+// globally
+var intervalID;
+var time;
+var currentQuestion;
 
+document.querySelector("#start-button").addEventListener("click", startQuiz);
+
+function startQuiz() {
+  
+  hideCards();
+  questionCard.removeAttributr("hidden")
+
+  curentQuestion = 0;
+  displayQuestion();
+
+  time = question.length * 10;
+
+  intervalID = setInterval(countdown, 1000);
+
+  displayTime()
+}
+
+function countdown(){
+  time--;
+  displayTime();
+  if (time < 1) {
+    endQuiz();
+  }
+}
+
+const timeDisplay = document.querySelector("#time");
+function displayTime() {
+  timeDisplay.textContent = time;
+}
+
+function displayQuestion() {
+  let question = questions[currentQuestion];
+  let options = question.options;
+
+  let h2QuestionElement = document.querySelector("#question-text");
+  h2QuestionElement.textContent = question.questionText;
+
+  for (let i = 0; i < options.length; i++) {
+    let option = options[i];
+    let optionButton = document.querySelector("#option" + i);
+    optionButton.textContent = option;
+  }
+}
 
 
 
