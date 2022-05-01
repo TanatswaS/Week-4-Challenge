@@ -34,4 +34,27 @@ const questions = [
   },
 ];
 
-const startPage
+const startPage = document.querySelector("#start-page")
+const questionPage = document.querySelector("#question-page")
+const scorePage = document.querySelector("#score-page")
+const leaderboardPage = document.querySelector("#leaderboard-page")
+
+//dont need these yet
+function hideCards(){
+  startCard.setAttribute("hidden", true)
+  questionCard.setAttribute("hidden", true)
+  scoreCard.setAttribute("hidden", true)
+  leaderboardCard.setAttribute("hidden", true)
+}
+
+const resultDiv = document.querySelector("#result-div")
+const resultText = document.querySelector("#result-div")
+
+function hideResultText(){
+  resultDiv.style.display = "none";
+}
+
+
+
+
+
