@@ -41,10 +41,10 @@ const leaderboardPage = document.querySelector("#leaderboard-page")
 
 //dont need these yet
 function hideCards(){
-  startCard.setAttribute("hidden", true)
-  questionCard.setAttribute("hidden", true)
-  scoreCard.setAttribute("hidden", true)
-  leaderboardCard.setAttribute("hidden", true)
+  startPage.setAttribute("hidden", true)
+  questionPage.setAttribute("hidden", true)
+  scorePage.setAttribute("hidden", true)
+  leaderboardPage.setAttribute("hidden", true)
 }
 
 const resultDiv = document.querySelector("#result-div")
@@ -102,6 +102,7 @@ function displayQuestion() {
     optionButton.textContent = option;
   }
 }
+
 
 
 
